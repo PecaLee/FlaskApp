@@ -42,7 +42,12 @@ def search():
 
 # BLUEPRINT | DONT EDIT
 
+import os
+
 if __name__ == "__main__":
-    app.run(port=5000)
+    # Render는 'PORT' 환경 변수를 제공함. 없으면 기본값으로 5000 사용.
+    port = int(os.environ.get("PORT", 5000))
+    # host를 '0.0.0.0'으로 설정해야 외부(Render의 로드밸런서)에서 접근 가능함.
+    app.run(host="0.0.0.0", port=port)
 
 # /BLUEPRINT
