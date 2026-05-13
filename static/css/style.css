@@ -1,0 +1,73 @@
+@import url("/static/css/reset.css");
+
+@font-face {
+    font-family: 'dunggeunmo';
+    src: url('/static/font/DungGeunMo.woff2') format('woff2'),
+        url('/static/font/DungGeunMo.woff') format('woff'),
+        url('/static/font/DungGeunMo.eot');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'dunggeunmo' !important;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-box,
+.result-box {
+    width: 80vw;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin: 2rem 0;
+}
+
+.nes-container {
+    padding: 1.5rem;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem !important;
+}
+
+button {
+    min-width: 100px;
+}
+
+li {
+    margin: 2rem 0;
+    line-height: 1.4;
+}
+
+li .title {
+    line-height: 0.4;
+    font-size: 1.4rem !important;
+}
+
+li p:last-child {
+    margin-top: 1rem;
+}
+
+a.nes-btn {
+    margin-bottom: 3rem;
+}
+
+.result-box>h1+p {
+    margin-bottom: 2rem;
+}

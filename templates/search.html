@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="result-box">
+        <h1>"{{ keyword }}" 검색 결과</h1>
+
+        {% if jobs %}
+        <ul>
+            {% for job in jobs %}
+            <li class="nes-container with-title">
+                <h2 class="title">{{ job.title }}</h2>
+                <p class="company_name"><strong>회사명:</strong> {{ job.company_name }}</p>
+                <p><strong>상세정보:</strong> {{ job.description }}</p>
+                <p><strong>링크:</strong> <a href="{{ job.link }}" target="_blank">{{ job.link }}</a></p>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>검색 결과가 없습니다.</p>
+        {% endif %}
+        <a class="nes-btn is-primary" href="/">돌아가기</a>
+    </div>
+</body>
+
+</html>

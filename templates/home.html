@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Search</title>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="nes-container with-title is-centered search-box">
+        <p class="title">
+        <h1>채용공고 검색</h1>
+        </p>
+        <form action="/search" method="GET">
+            <input class="nes-input" type="text" name="keyword" placeholder="검색어를 입력하세요" required>
+            <button class="nes-btn is-primary" type="submit">검색</button>
+        </form>
+    </div>
+</body>
+
+</html>
